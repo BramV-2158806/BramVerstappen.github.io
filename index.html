@@ -3,7 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bram Verstappen - Resume</title>
+    <title>Bram Verstappen</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -11,590 +14,335 @@
             box-sizing: border-box;
         }
 
-        :root {
-            --primary: #1a1a1a;
-            --secondary: #666;
-            --accent: #10a37f;
-            --accent-light: #1db584;
-            --background: #ffffff;
-            --border: #e0e0e0;
-            --text: #212121;
-            --text-light: #666666;
-        }
-
-        @media (prefers-color-scheme: dark) {
-            :root {
-                --primary: #ffffff;
-                --secondary: #999;
-                --accent: #10a37f;
-                --accent-light: #1db584;
-                --background: #0d0d0d;
-                --border: #2d2d2d;
-                --text: #ffffff;
-                --text-light: #b4b4b4;
-            }
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', sans-serif;
+            font-family: 'Styrene A', 'Styrene B', 'Work Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', sans-serif;
+            background: #f5f0e8;
+            color: #1a1a1a;
             line-height: 1.6;
-            color: var(--text);
-            background-color: var(--background);
-            background-image: radial-gradient(circle at 20% 80%, rgba(16, 163, 127, 0.05) 0%, transparent 50%),
-                              radial-gradient(circle at 80% 20%, rgba(16, 163, 127, 0.05) 0%, transparent 50%);
-            background-attachment: fixed;
-        }
-
-        /* Navigation */
-        nav {
-            position: sticky;
-            top: 0;
-            backdrop-filter: blur(10px);
-            background-color: rgba(255, 255, 255, 0.8);
-            border-bottom: 1px solid var(--border);
-            z-index: 1000;
         }
 
         @media (prefers-color-scheme: dark) {
-            nav {
-                background-color: rgba(13, 13, 13, 0.8);
+            body {
+                background-color: #1a1a1a;
+                color: #f5f0e8;
             }
         }
 
-        nav .container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1rem 2rem;
-            max-width: 900px;
-            margin: 0 auto;
-        }
-
-        nav a {
-            text-decoration: none;
-            color: var(--text);
-            font-weight: 500;
-            margin: 0 1.5rem;
-            transition: color 0.3s ease;
-        }
-
-        nav a:hover {
-            color: var(--accent);
-        }
-
-        .nav-brand {
-            font-weight: 600;
-            font-size: 1.3rem;
-        }
-
-        .nav-links {
-            display: flex;
-            list-style: none;
-        }
-
-        .nav-links a {
-            margin: 0 1rem;
-        }
-
-        /* Main Container */
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 2rem;
-        }
-
-        /* Hero Section */
-        .hero {
-            min-height: 600px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            padding: 4rem 2rem;
-            background: linear-gradient(135deg, rgba(16, 163, 127, 0.1) 0%, rgba(16, 163, 127, 0.05) 100%);
-            border-radius: 12px;
-            margin: 3rem auto;
-        }
-
-        .hero h1 {
-            font-size: 3.5rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-            background: linear-gradient(135deg, var(--accent) 0%, var(--accent-light) 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .hero .subtitle {
-            font-size: 1.5rem;
-            color: var(--secondary);
-            margin-bottom: 2rem;
-            max-width: 600px;
-        }
-
-        .cta-buttons {
-            display: flex;
-            gap: 1rem;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        .btn {
-            padding: 0.75rem 2rem;
-            border-radius: 6px;
-            text-decoration: none;
-            font-weight: 500;
-            transition: all 0.3s ease;
-            border: none;
-            cursor: pointer;
-            font-size: 0.95rem;
-        }
-
-        .btn-primary {
-            background-color: var(--accent);
-            color: white;
-        }
-
-        .btn-primary:hover {
-            background-color: var(--accent-light);
-            transform: translateY(-2px);
-            box-shadow: 0 10px 30px rgba(16, 163, 127, 0.2);
-        }
-
-        .btn-secondary {
-            background-color: transparent;
-            color: var(--accent);
-            border: 2px solid var(--accent);
-        }
-
-        .btn-secondary:hover {
-            background-color: rgba(16, 163, 127, 0.1);
-        }
-
-        /* Section Styles */
-        section {
-            margin: 4rem auto;
+        /* Header */
+        header {
             padding: 3rem 2rem;
-            border-radius: 12px;
+            max-width: 1000px;
+            margin: 0 auto;
+            text-align: center;
         }
 
-        .section-title {
-            font-size: 2rem;
+        h1 {
+            font-size: 3.5rem;
             font-weight: 600;
+            margin-bottom: 1rem;
+            letter-spacing: -1px;
+        }
+
+        .subtitle {
+            font-size: 1.25rem;
+            color: #c15f3c;
+            margin-bottom: 3rem;
+            font-weight: 400;
+        }
+
+        .header-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
             margin-bottom: 2rem;
-            color: var(--text);
         }
-
-        .section-title::after {
-            content: '';
-            display: block;
-            width: 80px;
-            height: 4px;
-            background: linear-gradient(90deg, var(--accent) 0%, var(--accent-light) 100%);
-            margin-top: 0.5rem;
-        }
-
-        /* About Section */
-        #about {
-            background-color: transparent;
-        }
-
-        .about-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
-            align-items: center;
-        }
-
-        .about-text p {
-            font-size: 1.05rem;
-            line-height: 1.8;
-            color: var(--text-light);
-            margin-bottom: 1.5rem;
-        }
-
-        .about-image {
-            width: 200px;
-            height: 200px;
-            border-radius: 12px;
-            background: linear-gradient(135deg, var(--accent) 0%, var(--accent-light) 100%);
+        .header-link {
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 3rem;
-            margin: 0 auto;
-        }
-
-        /* Skills Grid */
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-        }
-
-        .skill-card {
-            padding: 2rem;
-            background-color: rgba(16, 163, 127, 0.05);
-            border: 1px solid var(--border);
-            border-radius: 8px;
-            transition: all 0.3s ease;
-        }
-
-        .skill-card:hover {
-            border-color: var(--accent);
-            transform: translateY(-4px);
-            box-shadow: 0 10px 30px rgba(16, 163, 127, 0.1);
-        }
-
-        .skill-card h3 {
-            color: var(--accent);
-            font-size: 1.2rem;
-            margin-bottom: 1rem;
-        }
-
-        .skill-card ul {
-            list-style: none;
+            width: 48px;
+            height: 48px;
+            background: none;
+            border: none;
             padding: 0;
+            border-radius: 6px;
+            transition: box-shadow 0.2s;
+        }
+        .header-link:hover svg rect {
+            filter: drop-shadow(0 0 8px #c15f3c);
         }
 
-        .skill-card li {
-            padding: 0.5rem 0;
-            color: var(--text-light);
+        @media (prefers-color-scheme: dark) {
+            .subtitle {
+                color: #c15f3c;
+            }
         }
 
-        .skill-card li::before {
-            content: '▸ ';
-            color: var(--accent);
-            font-weight: bold;
-            margin-right: 0.5rem;
+        /* Main content */
+        main {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 2rem 4rem;
         }
 
         /* Projects Section */
+        #projects {
+            margin-bottom: 4rem;
+        }
+
+        .projects-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 2.5rem;
+            letter-spacing: -0.5px;
+        }
+
         .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            display: flex;
+            flex-direction: column;
             gap: 2rem;
         }
 
         .project-card {
+            width: 100%;
+            max-width: 900px;
+            margin: 0 auto;
             padding: 2rem;
-            background-color: rgba(16, 163, 127, 0.05);
-            border: 1px solid var(--border);
-            border-radius: 8px;
-            transition: all 0.3s ease;
+            background-color: #ffffff;
+            border-radius: 12px;
+            border: 1px solid #e8dcc8;
+            box-shadow: 0 2px 8px rgba(193, 95, 60, 0.04);
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            transition: border-color 0.2s, box-shadow 0.2s;
         }
 
         .project-card:hover {
-            border-color: var(--accent);
-            transform: translateY(-4px);
-            box-shadow: 0 10px 30px rgba(16, 163, 127, 0.1);
+            border-color: #ff6b35;
+            box-shadow: 0 0 0 4px rgba(255, 107, 53, 0.25), 0 8px 20px rgba(255, 107, 53, 0.1);
         }
 
-        .project-card h3 {
-            color: var(--accent);
-            font-size: 1.3rem;
-            margin-bottom: 0.5rem;
+        @media (prefers-color-scheme: dark) {
+            .project-card:hover {
+                border-color: #ff6b35;
+                box-shadow: 0 0 0 4px rgba(255, 107, 53, 0.35), 0 8px 20px rgba(255, 107, 53, 0.2);
+            }
         }
 
-        .project-card .date {
-            color: var(--secondary);
-            font-size: 0.9rem;
-            margin-bottom: 1rem;
-        }
-
-        .project-card p {
-            color: var(--text-light);
-            line-height: 1.6;
-        }
-
-        /* Experience Timeline */
-        .timeline {
-            position: relative;
-            padding: 2rem 0;
-        }
-
-        .timeline-item {
-            padding: 2rem;
-            margin-bottom: 2rem;
-            background-color: rgba(16, 163, 127, 0.05);
-            border-left: 4px solid var(--accent);
-            border-radius: 0 8px 8px 0;
-        }
-
-        .timeline-item h3 {
-            color: var(--text);
-            font-size: 1.2rem;
-            margin-bottom: 0.25rem;
-        }
-
-        .timeline-item .position {
-            color: var(--accent);
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-        }
-
-        .timeline-item .date {
-            color: var(--secondary);
-            font-size: 0.9rem;
-            margin-bottom: 1rem;
-        }
-
-        .timeline-item p {
-            color: var(--text-light);
-            line-height: 1.6;
-        }
-
-        /* Contact Section */
-        #contact {
-            background: linear-gradient(135deg, rgba(16, 163, 127, 0.1) 0%, rgba(16, 163, 127, 0.05) 100%);
-            text-align: center;
-        }
-
-        .contact-links {
+        .project-header {
             display: flex;
-            justify-content: center;
-            gap: 2rem;
-            margin-top: 2rem;
+            justify-content: space-between;
+            align-items: center;
             flex-wrap: wrap;
         }
 
-        .contact-links a {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            padding: 0.75rem 1.5rem;
-            background-color: rgba(16, 163, 127, 0.1);
-            color: var(--accent);
-            text-decoration: none;
-            border-radius: 6px;
-            transition: all 0.3s ease;
-            border: 1px solid var(--border);
+        .project-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #c15f3c;
         }
 
-        .contact-links a:hover {
-            background-color: var(--accent);
-            color: white;
-            border-color: var(--accent);
-            transform: translateY(-2px);
+        .project-dates {
+            font-size: 1rem;
+            color: #8b7355;
+            font-weight: 500;
+        }
+
+        .project-description {
+            color: #5a5250;
+            font-size: 1.05rem;
+            line-height: 1.7;
+        }
+
+        .project-actions {
+            display: flex;
+            gap: 1rem;
+            margin-top: 0.5rem;
+        }
+
+        .project-actions a,
+        .project-actions button {
+            background: #b1ada1;
+            color: #fff;
+            border: none;
+            border-radius: 50px;
+            padding: 0.5rem 1.5rem;
+            font-size: 0.95rem;
+            font-weight: 500;
+            text-decoration: none;
+            cursor: pointer;
+            transition: background 0.2s, transform 0.2s;
+        }
+
+        .project-actions a:hover,
+        .project-actions button:hover {
+            background: #9a958a;
+            transform: translateY(-1px);
+        }
+
+        .youtube-link {
+            background: #b1ada1;
+            color: #fff;
+            border-radius: 50px;
+            padding: 0.5rem 1.5rem;
+            font-size: 0.95rem;
+            font-weight: 500;
+            text-decoration: none;
+            transition: background 0.2s, transform 0.2s;
+        }
+
+        .youtube-link:hover {
+            background: #9a958a;
+            transform: translateY(-1px);
+        }
+
+        @media (max-width: 640px) {
+            .project-card {
+                padding: 1rem;
+            }
+
+            .project-title {
+                font-size: 1.2rem;
+            }
         }
 
         /* Footer */
         footer {
-            text-align: center;
             padding: 3rem 2rem;
-            border-top: 1px solid var(--border);
-            color: var(--secondary);
-            margin-top: 4rem;
+            text-align: center;
+            border-top: 1px solid #e0e0e0;
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            footer {
+                border-top-color: #333;
+                color: #aaa;
+            }
+        }
+
+        footer a {
+            color: inherit;
+            text-decoration: none;
+            margin: 0 1rem;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
         }
 
         /* Responsive */
-        @media (max-width: 768px) {
-            .hero h1 {
+        @media (max-width: 640px) {
+            h1 {
                 font-size: 2.5rem;
             }
 
-            .hero .subtitle {
-                font-size: 1.1rem;
+            .subtitle {
+                font-size: 1rem;
             }
 
-            .about-content {
+            header {
+                padding: 2rem 1rem;
+            }
+
+            main {
+                padding: 0 1rem 3rem;
+            }
+
+            .projects-grid {
                 grid-template-columns: 1fr;
             }
-
-            .about-image {
-                order: -1;
-            }
-
-            .nav-links {
-                display: none;
-            }
-
-            .cta-buttons {
-                flex-direction: column;
-                width: 100%;
-            }
-
-            .btn {
-                width: 100%;
-            }
-
-            .contact-links {
-                flex-direction: column;
-                gap: 1rem;
-            }
-
-            .contact-links a {
-                width: 100%;
-                justify-content: center;
-            }
-        }
-
-        /* Animations */
-        @keyframes slideInUp {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        section {
-            animation: slideInUp 0.6s ease-out;
         }
     </style>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav>
-        <div class="container">
-            <a href="#" class="nav-brand">Bram Verstappen</a>
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <section class="hero">
+    <header>
         <h1>Bram Verstappen</h1>
-        <p class="subtitle">Building the future with code and creativity</p>
-        <div class="cta-buttons">
-            <a href="#contact" class="btn btn-primary">Get in Touch</a>
-            <a href="#projects" class="btn btn-secondary">View My Work</a>
+        <p class="subtitle">Master student in Computer Science</p>
+        <div class="header-links">
+            <a href="https://www.youtube.com/@AREND.24" target="_blank" class="header-link" aria-label="YouTube">
+                <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="red" viewBox="0 0 24 24">
+                    <path fill-rule="evenodd" d="M21.7 8.037a4.26 4.26 0 0 0-.789-1.964 2.84 2.84 0 0 0-1.984-.839c-2.767-.2-6.926-.2-6.926-.2s-4.157 0-6.928.2a2.836 2.836 0 0 0-1.983.839 4.225 4.225 0 0 0-.79 1.965 30.146 30.146 0 0 0-.2 3.206v1.5a30.12 30.12 0 0 0 .2 3.206c.094.712.364 1.39.784 1.972.604.536 1.38.837 2.187.848 1.583.151 6.731.2 6.731.2s4.161 0 6.928-.2a2.844 2.844 0 0 0 1.985-.84 4.27 4.27 0 0 0 .787-1.965 30.12 30.12 0 0 0 .2-3.206v-1.516a30.672 30.672 0 0 0-.202-3.206Zm-11.692 6.554v-5.62l5.4 2.819-5.4 2.801Z" clip-rule="evenodd"/>
+                </svg>
+            </a>
+            <a href="mailto:bram.verstappen@student.uhasselt.be" class="header-link" aria-label="Email">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6 8C6 7.44772 6.44772 7 7 7H17C17.5523 7 18 7.44772 18 8V16C18 16.5523 17.5523 17 17 17H7C6.44772 17 6 16.5523 6 16V8ZM7.5 9L12 12.5L16.5 9" stroke="#c15f3c" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </a>
         </div>
-    </section>
+    </header>
 
-    <!-- About Section -->
-    <section id="about" class="container">
-        <h2 class="section-title">About</h2>
-        <div class="about-content">
-            <div class="about-text">
-                <p>
-                    I'm a passionate developer and creative thinker dedicated to crafting elegant solutions to complex problems. With a strong foundation in modern web technologies and a curious mind, I love exploring new ideas and pushing the boundaries of what's possible.
-                </p>
-                <p>
-                    When I'm not coding, you'll find me exploring new technologies, contributing to open-source projects, or sharing knowledge with the developer community.
-                </p>
+    <main>
+        <section id="projects">
+            <h2 class="projects-title">Projects</h2>
+            <div class="projects-grid">
+                <!-- Example Project Card with Paper button -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-title">Learning to Delegate and Act with DELEGACT: Multimodal Language Models for Task-Level Human Cobot Planning in Industrial Assembly</div>
+                        <div class="project-dates">2026</div>
+                    </div>
+                    <div class="project-description">
+                        Industrial assembly is shifting toward human-robot collaboration
+                        (HRC) to leverage the complementary strengths of both agents.
+                        However, traditional task allocation referred to as the Robotic As-
+                        sembly Line Balancing Problem (RALBP) remains labor-intensive
+                        and often lacks transparency. We introduce DELEGA CT, a frame-
+                        work designed to produce workable, intelligible human-cobot task
+                        allocations. The framework uses a Vision-Language Model (VLM)
+                        to extract atomic operations from expert demonstration videos,
+                        then employs a Large Language Model (LLM) to delegate these
+                        tasks based on robot specifications, operator competencies, and
+                        material definitions. We provide a proof-of-concept prototype and
+                        preliminary testing on illustrative cases. Results demonstrate the
+                        system’s ability to reason about complex constraints such as preci-
+                        sion, weight, and ergonomics. This paper illustrates how off-the-
+                        shelf foundation models can automate HRC decision-making via
+                        a human-in-the-loop paradigm while preserving operator agency
+                        and understanding.
+                    </div>
+                    <div class="project-actions"><!-- Add as many buttons as you like -->
+                        <a href="/pdfs/delegact.pdf" download>Paper</a>
+                        <a class="youtube-link" href="https://www.youtube.com/watch?v=XFohrGoulik" target="_blank">Demo</a>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-title">Research internship @ DFL</div>
+                        <div class="project-dates">Sep 2025 – current</div>
+                    </div>
+                    <div class="project-description">
+                        Helping the research team in Prof. Dr. Ramakers lab. 
+                    </div>
+                </div>
+                <!-- Example Project Card with only Paper button -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-title">Summer job @ Research lab DFL</div>
+                        <div class="project-dates">Jun 2025 – Aug 2025</div>
+                    </div>
+                    <div class="project-description">
+                        I worked in the lab of Prof. Dr. Ramakers during the summer of 2025. Here I worked 
+                        on LLM-based task delegation in an assembly line context. 
+                        Using expert demonstration video as input, we implemented a 
+                        hybrid pipeline where a VLM identifies atomic tasks and an LLM delegates them to a cobot or a human, 
+                        demonstrated in a proof of concept.
+                    </div>
+                </div>
             </div>
-            <div class="about-image">👨‍💻</div>
-        </div>
-    </section>
+        </section>
+    </main>
 
-    <!-- Experience Section -->
-    <section id="experience" class="container">
-        <h2 class="section-title">Experience</h2>
-        <div class="timeline">
-            <div class="timeline-item">
-                <h3>Company Name</h3>
-                <div class="position">Senior Developer</div>
-                <div class="date">2023 - Present</div>
-                <p>Led development of key features and mentored junior developers. Improved system performance by 40% and established best practices for the team.</p>
-            </div>
-
-            <div class="timeline-item">
-                <h3>Previous Company</h3>
-                <div class="position">Full Stack Developer</div>
-                <div class="date">2021 - 2023</div>
-                <p>Developed and maintained multiple web applications. Collaborated with product and design teams to deliver user-focused solutions.</p>
-            </div>
-
-            <div class="timeline-item">
-                <h3>Startup</h3>
-                <div class="position">Junior Developer</div>
-                <div class="date">2020 - 2021</div>
-                <p>Contributed to frontend and backend development. Gained experience with modern web frameworks and cloud technologies.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills" class="container">
-        <h2 class="section-title">Skills</h2>
-        <div class="skills-grid">
-            <div class="skill-card">
-                <h3>Frontend</h3>
-                <ul>
-                    <li>React / Next.js</li>
-                    <li>TypeScript</li>
-                    <li>Tailwind CSS</li>
-                    <li>Web Performance</li>
-                </ul>
-            </div>
-
-            <div class="skill-card">
-                <h3>Backend</h3>
-                <ul>
-                    <li>Node.js / Express</li>
-                    <li>Python / Django</li>
-                    <li>PostgreSQL</li>
-                    <li>REST APIs</li>
-                </ul>
-            </div>
-
-            <div class="skill-card">
-                <h3>Tools & Practices</h3>
-                <ul>
-                    <li>Git & GitHub</li>
-                    <li>Docker</li>
-                    <li>CI/CD Pipelines</li>
-                    <li>Agile Development</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="container">
-        <h2 class="section-title">Projects</h2>
-        <div class="projects-grid">
-            <div class="project-card">
-                <h3>Project Name</h3>
-                <div class="date">2024</div>
-                <p>A brief description of your project. Explain the problem you solved, the technologies used, and the impact it had. Make it compelling and highlight your role.</p>
-            </div>
-
-            <div class="project-card">
-                <h3>Another Project</h3>
-                <div class="date">2023</div>
-                <p>Describe what made this project interesting. What challenges did you overcome? What technologies did you use? What did you learn?</p>
-            </div>
-
-            <div class="project-card">
-                <h3>Side Project</h3>
-                <div class="date">2023</div>
-                <p>Share your passionate project here. Personal projects often show initiative and genuine interest in solving real problems.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="container">
-        <h2 class="section-title">Let's Connect</h2>
-        <p style="color: var(--text-light); margin-bottom: 2rem; font-size: 1.1rem;">I'm always interested in hearing about new opportunities and interesting projects.</p>
-        <div class="contact-links">
-            <a href="mailto:your.email@example.com">📧 Email</a>
-            <a href="https://linkedin.com" target="_blank">💼 LinkedIn</a>
-            <a href="https://github.com" target="_blank">🐙 GitHub</a>
-            <a href="https://twitter.com" target="_blank">𝕏 Twitter</a>
-        </div>
-    </section>
-
-    <!-- Footer -->
     <footer>
-        <p>&copy; 2024 Bram Verstappen. Built with passion and clean code.</p>
+        <div>
+            <a href="mailto:bram.verstappen@student.uhasselt.be">Email</a>
+            <a href="https://github.com" target="_blank">GitHub</a>
+            <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+        </div>
     </footer>
 </body>
 </html>
